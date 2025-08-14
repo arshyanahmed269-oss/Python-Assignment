@@ -1,0 +1,267 @@
+1. Write a Python program to print "Hello,
+ANSWER IS 
+-# Python program to print Hello, World for python
+
+print("Hello, World for python")
+
+
+2.Write a Python program that displays your name and age
+ANSWER IS 
+-# Python program to display name and age
+
+name = "Arshyan"    # replace with your name
+age = 25           # replace with your age
+
+print("Name:", name)
+print("Age:", age)
+
+3.Write code to print all the pre-defined keywords in Python using the keyword library
+ANSWER IS 
+-# Python program to print all predefined keywords in Python
+
+import keyword
+
+print("Python keywords are:")
+for kw in keyword.kwlist:
+    print(kw)
+
+4.Write a program that checks if a given word is a Python keyword
+ANSWER IS
+
+-# Python program to check if a word is a Python keyword
+
+import keyword
+
+# take word from user
+word = input("Enter a word: ")
+
+# check if it is a keyword
+if keyword.iskeyword(word):
+    print(f"'{word}' is a Python keyword.")
+else:
+    print(f"'{word}' is NOT a Python keyword.")
+
+5. Create a list and tuple in Python, and demonstrate how attempting to change an element works differently for each     
+ANSWER IS 
+
+-# Creating a list (mutable)
+my_list = [10, 20, 30]
+print("Original list:", my_list)
+
+# Changing an element in the list
+my_list[1] = 200
+print("List after change:", my_list)
+
+# Creating a tuple (immutable)
+my_tuple = (10, 20, 30)
+print("\nOriginal tuple:", my_tuple)
+
+# Attempting to change an element in the tuple
+try:
+    my_tuple[1] = 200
+except TypeError as e:
+    print("Error when trying to change tuple:", e)
+
+
+6. Write a function to demonstrate the behavior of mutable and immutable arguments.
+ANSWER IS
+ 
+-# Function that tries to modify its arguments
+def modify_data(num, lst):
+    # num is immutable (int)
+    num += 10
+    
+    # lst is mutable (list)
+    lst.append(4)
+    
+    print("\nInside function:")
+    print("num:", num)
+    print("lst:", lst)
+
+
+# Immutable example (integer)
+x = 5
+# Mutable example (list)
+my_list = [1, 2, 3]
+
+print("Before function call:")
+print("x:", x)
+print("my_list:", my_list)
+
+modify_data(x, my_list)
+
+print("\nAfter function call:")
+print("x:", x)            # unchanged
+print("my_list:", my_list) # changed
+
+7.Write a program that performs basic arithmetic operations on two user-input numbers
+ANSWER IS 
+-# Python program for basic arithmetic operations
+
+# Taking user input
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Performing operations
+print("\nResults:")
+print(f"Addition: {num1} + {num2} = {num1 + num2}")
+print(f"Subtraction: {num1} - {num2} = {num1 - num2}")
+print(f"Multiplication: {num1} * {num2} = {num1 * num2}")
+
+if num2 != 0:
+    print(f"Division: {num1} / {num2} = {num1 / num2}")
+else:
+    print("Division: Cannot divide by zero!")
+
+8.Write a program to demonstrate the use of logical operators
+ANSWER IS 
+-# Python program to demonstrate logical operators
+
+a = True
+b = False
+
+print("a =", a)
+print("b =", b)
+
+# Using 'and' operator
+print("\na and b:", a and b)  # True if both are True
+
+# Using 'or' operator
+print("a or b:", a or b)      # True if at least one is True
+
+# Using 'not' operator
+print("not a:", not a)        # Reverses the boolean value
+print("not b:", not b)
+
+9. Write a Python program to convert user input from string to integer, float, and boolean types.
+ANSWER IS 
+-# Python program to convert user input into different types
+
+# Taking input as string
+user_input = input("Enter a value: ")
+
+# String (original)
+print("\nAs String:", user_input)
+
+# Convert to Integer
+try:
+    int_value = int(user_input)
+    print("As Integer:", int_value)
+except ValueError:
+    print("As Integer: Conversion not possible")
+
+# Convert to Float
+try:
+    float_value = float(user_input)
+    print("As Float:", float_value)
+except ValueError:
+    print("As Float: Conversion not possible")
+
+# Convert to Boolean
+bool_value = bool(user_input)  # Non-empty string becomes True, empty string becomes False
+print("As Boolean:", bool_value)
+
+10.Write code to demonstrate type casting with list elements.
+ANSWER IS
+-# Python program to demonstrate type casting with list elements
+
+# Original list of strings
+str_list = ["10", "20", "30", "40"]
+
+print("Original list (strings):", str_list)
+
+# Convert each element to integer
+int_list = [int(x) for x in str_list]
+print("List as integers:", int_list)
+
+# Convert each element to float
+float_list = [float(x) for x in str_list]
+print("List as floats:", float_list)
+
+# Convert each element to boolean
+bool_list = [bool(int(x)) for x in str_list]
+print("List as booleans:", bool_list)
+
+11.Write a program that checks if a number is positive, negative, or zero
+ANSWER IS
+-# Python program to check if a number is positive, negative, or zero
+
+# Take number input from user
+num = float(input("Enter a number: "))
+
+# Check the number
+if num > 0:
+    print("The number is Positive.")
+elif num < 0:
+    print("The number is Negative.")
+else:
+    print("The number is Zero.")
+
+12. Write a for loop to print numbers from 1 to 10
+ANSWER IS 
+-# Python program to print numbers from 1 to 10
+
+for i in range(1, 11):
+    print(i)
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+13. Write a Python program to find the sum of all even numbers between 1 and 50
+ANSWER IS 
+-# Python program to find the sum of all even numbers between 1 and 50
+
+total = 0
+
+for num in range(1, 51):
+    if num % 2 == 0:
+        total += num
+
+print("Sum of even numbers between 1 and 50 is:", total)
+
+14. Write a program to reverse a string using a while loop.
+ANSWER IS 
+-# Python program to reverse a string using while loop
+
+# Take input from user
+text = input("Enter a string: ")
+
+# Initialize variables
+reversed_text = ""
+index = len(text) - 1
+
+# Reverse using while loop
+while index >= 0:
+    reversed_text += text[index]
+    index -= 1
+
+# Display result
+print("Reversed string:", reversed_text)
+
+15.Write a Python program to calculate the factorial of a number provided by the user using a while loop
+ANSWER IS 
+-# Python program to calculate factorial using while loop
+
+# Take input from user
+num = int(input("Enter a number: "))
+
+# Initialize result
+factorial = 1
+i = 1
+
+# While loop to calculate factorial
+while i <= num:
+    factorial *= i
+    i += 1
+
+# Display result
+print(f"Factorial of {num} is {factorial}")
+
+
